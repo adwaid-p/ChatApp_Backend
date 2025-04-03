@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.model");
 const MessageModel = require("../models/message.model");
-const blackListTokenModel = require("../models/BlackListToken.model");
+const blackListTokenModel = require("../models/blacklistToken.model");
 const cloudinary = require("../utils/Cloudinary");
 
 module.exports.registerUser = async (req, res, next) => {
