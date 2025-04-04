@@ -8,6 +8,7 @@ const { Server } = require("socket.io");
 const server = http.createServer(app);
 
 const PORT = process.env.PORT || 3000;
+
 const connectToDb = require("./db/db");
 const userRoutes = require("./routes/user.routes");
 const aiRoutes = require("./routes/ai.routes");
@@ -125,7 +126,7 @@ app.delete("/delete", async (req, res, next) => {
   }
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0' ,() => {
   console.log(`Server running on port ${PORT}`);
 });
 
